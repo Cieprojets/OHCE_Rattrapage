@@ -5,12 +5,11 @@ namespace OHCE.test
     using Xunit;
     public class OperationsTest
     {
-        [Fact]
-       public void TestAddition()
+        [Theory]
+        [InlineData(4,7,11)]
+        [InlineData(8, 8, 16)]
+        public void TestAddition(int x, int y , int resAttendu)
         {
-            int x = 2;
-            int y = 8;
-            int resAttendu = 10;
 
             Operation operation = new Operation();
             int res = operation.Somme(x,y);
