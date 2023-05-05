@@ -7,6 +7,9 @@ namespace OHCE.test
 
     public class OperationsTest
     {
+        
+        //etape1:lesbases
+
         [Theory]
         [InlineData(4,7,11)]
         [InlineData(8, 8, 16)]
@@ -61,6 +64,8 @@ namespace OHCE.test
 
         }
 
+        
+        //etape2:lesdécimaux
         [Theory]
         [InlineData(2.3, 4.7,1, 7.0)]
         [InlineData(2.56, 4.78,2, 7.34)]
@@ -116,7 +121,19 @@ namespace OHCE.test
         }
 
 
+        //etape3:tolérance
 
+        [Theory]
+        [InlineData("5\n + \n8", 13)]
+        [InlineData("7 + \n4", 11)]
+
+        public void TestSommeTolerance(string saisi, int resSommeToleranceAttendu)
+        {
+           
+            var operation = new Operation();
+            var res = operation.SommeTolerance(saisi);
+            Assert.Equal(resSommeToleranceAttendu, res);
+        }
 
     }
 

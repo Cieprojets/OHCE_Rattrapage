@@ -2,6 +2,7 @@ namespace OHCE
 {
     public class Operation
     {
+        //etape1:lesbases
         public int Somme(int x, int y)
         {
             return x + y;
@@ -24,6 +25,7 @@ namespace OHCE
             return x - y;
         }
 
+        //etape2:lesdécimaux
         public double PrecisionSomme(double x, double y, int precision)
         {
             return Math.Round(x + y, precision);
@@ -61,6 +63,22 @@ namespace OHCE
         }
 
 
+        //etape3:tolérance
+
+        public int SommeTolerance(string saisi )
+        {
+            saisi = saisi.Replace(" ", "").Replace("\n", "");
+            string[] valeurs = saisi.Split('+');
+            int x = int.Parse(valeurs[0]);
+            int y = int.Parse(valeurs[1]);
+            int z = x + y;
+            return z;
+
+        }
+
+
+
+
 
 
 
@@ -72,5 +90,5 @@ namespace OHCE
 
 
     }
- 
+
 }
