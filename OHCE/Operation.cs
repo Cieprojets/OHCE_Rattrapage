@@ -64,7 +64,7 @@ namespace OHCE
 
 
         //etape3:tolérance
-
+        //operation somme qui est neutre aux espaces et aux sauts de ligne
         public int SommeTolerance(string saisi )
         {
             saisi = saisi.Replace(" ", "").Replace("\n", "");
@@ -78,17 +78,20 @@ namespace OHCE
 
 
 
+        public int SommeToleranceEvolue(string saisie)
+        {
+            saisie = saisie.Replace(" ", "").Replace("\n", "");
+            if (saisie.Contains("plus"))
+            {
+                var valeurs = saisie.Split("plus");
+                return int.Parse(valeurs[0]) + int.Parse(valeurs[1]);
+            }
+            return 0;
+
+        }
 
 
 
-
-
-
-
-
-
-
-
-    }
+}
 
 }
