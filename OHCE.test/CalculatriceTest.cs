@@ -6,6 +6,7 @@ namespace OHCE.test
     using static OHCE.Operation;
     public class TestCalculatrice
     {
+        //Langue francaise 
         [Theory]
         [InlineData("3 plus 3", 6)]
         [InlineData("8plus 7", 15)]
@@ -76,8 +77,10 @@ namespace OHCE.test
           
             Assert.Equal(resultatAttenduDifference, res);
         }
+        
+        
 
 
 
-    }
+}
     }
