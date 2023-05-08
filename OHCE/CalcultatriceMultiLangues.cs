@@ -8,6 +8,7 @@ namespace OHCE
     using System.Net;
     using System.Runtime.InteropServices;
     using System.Text;
+    using System.Text.RegularExpressions;
     using System.Threading.Channels;
     using Xunit;
     public class CalcultatriceMultiLangues
@@ -147,6 +148,14 @@ namespace OHCE
 
             return difference;
         }
+
+
+
+       
+
+       
+
+
 
     }
    
