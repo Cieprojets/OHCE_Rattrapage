@@ -11,8 +11,8 @@ namespace OHCE.test
         //etape1:lesbases
 
         [Theory]
-        [InlineData(4,7,12)]
-        [InlineData(8, 8, 18)]
+        [InlineData(4,7,11)]
+        [InlineData(8, 8, 16)]
         public void TestAddition(int x, int y , int resAttendu)
         {
 
@@ -25,8 +25,8 @@ namespace OHCE.test
 
 
         [Theory]
-        [InlineData(5,4,25)]
-        [InlineData(1,80,87)]
+        [InlineData(5,4,20)]
+        [InlineData(1,80,80)]
         public void TestProduit(int x, int y, int resAttenduProduit)
         {
 
@@ -38,8 +38,8 @@ namespace OHCE.test
         }
 
         [Theory]
-        [InlineData(20, 5, 4,1)]
-        [InlineData(1, 1, 1, 1)]
+        [InlineData(20, 5, 4,0)]
+        [InlineData(1, 1, 1, 0)]
         public void TestDivision(int x, int y, int resAttenduQuotient ,int resAttenduReste)
         {
 
@@ -52,8 +52,8 @@ namespace OHCE.test
         }
 
         [Theory]
-        [InlineData(7, 4, 9)]
-        [InlineData(2, 8, -12)]
+        [InlineData(7, 4, 3)]
+        [InlineData(2, 8, -6)]
         public void TestDifference(int x, int y, int resAttenduDifference)
         {
 
