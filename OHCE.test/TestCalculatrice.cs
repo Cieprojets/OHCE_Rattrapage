@@ -8,10 +8,10 @@ namespace OHCE.test
     {
         //Langue francaise 
         [Theory]
-        [InlineData("10 plus 3", 6)]
-        [InlineData("1plus 7", 15)]
-        [InlineData(" 9    plus   4", 10)]
-        [InlineData("1\nplus\n9", 20)]
+        [InlineData("3 plus 3", 6)]
+        [InlineData("8plus 7", 15)]
+        [InlineData(" 6    plus   4", 10)]
+        [InlineData("11\nplus\n9", 20)]
 
         public void TestSomme(string valeurs, int resultatAttenduSomme)
         {
@@ -25,9 +25,9 @@ namespace OHCE.test
 
         [Theory]
         [InlineData("5 fois 4", 20)]
-        [InlineData("43fois6", 18)]
-        [InlineData("12\nfois\n8", 8)]
-        [InlineData(" 4    fois   1", 45)]
+        [InlineData("3fois6", 18)]
+        [InlineData("1\nfois\n8", 8)]
+        [InlineData(" 45    fois   1", 45)]
         public void TestProduit(string valeurs, int resultatAttenduProduit)
         {
 
@@ -42,10 +42,10 @@ namespace OHCE.test
 
 
         [Theory]
-        [InlineData("6 divisé par 2", 2)]
-        [InlineData("4divisépar5", 2)]
-        [InlineData("3\ndivisé\n3", 2)]
-        [InlineData(" 20    divisé   2", 100)]
+        [InlineData("4 divisé par 2", 2)]
+        [InlineData("10divisépar5", 2)]
+        [InlineData("6\ndivisé\n3", 2)]
+        [InlineData(" 200    divisé   2", 100)]
         public void TestDivision(string valeurs, int resultatAttenduDivison)
         {
 
@@ -61,10 +61,10 @@ namespace OHCE.test
 
 
         [Theory]
-        [InlineData("400 moins 3", 1)]
-        [InlineData("4moins 7", -6)]
-        [InlineData("4\nmoins\n7", 7)]
-        [InlineData(" 1    moins   10", 0)]
+        [InlineData("4 moins 3", 1)]
+        [InlineData("1moins 7", -6)]
+        [InlineData("14\nmoins\n7", 7)]
+        [InlineData(" 10    moins   10", 0)]
         public void TestSoustraction(string valeurs, int resultatAttenduDifference)
         {
 
