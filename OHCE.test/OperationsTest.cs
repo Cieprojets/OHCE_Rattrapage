@@ -67,8 +67,8 @@ namespace OHCE.test
         
         //etape2:lesdécimaux
         [Theory]
-        [InlineData(2.3, 8.7,1, 7.0)]
-        [InlineData(2.56, 8.78,2, 7.34)]
+        [InlineData(2.3, 4.7,1, 7.0)]
+        [InlineData(2.56, 4.78,2, 7.34)]
        public void TestAdditionPrecision(double x, double y,int precision, double resPrecisAttendu)
         {
 
@@ -80,8 +80,8 @@ namespace OHCE.test
         }
 
         [Theory]
-        [InlineData(4.3, 10.7, 2, 37.41)]
-        [InlineData(7.11, 8.555, 3, 39.496)]
+        [InlineData(4.3, 8.7, 2, 37.41)]
+        [InlineData(7.11, 5.555, 3, 39.496)]
         public void TestProduitPrecision(double x, double y, int precision, double resPrecisProduitAttendu)
         {
 
@@ -93,8 +93,8 @@ namespace OHCE.test
         }
 
         [Theory]
-        [InlineData(82.5, 5.6, 3, 2.232)]
-        [InlineData(67.56, 89.999, 6, 0.195113)]
+        [InlineData(12.5, 5.6, 3, 2.232)]
+        [InlineData(17.56, 89.999, 6, 0.195113)]
 
         public void TestDivisionPrecision(double x, double y, int precision, double resPrecisDivisionAttendu)
         {
@@ -107,8 +107,8 @@ namespace OHCE.test
         }
 
         [Theory]
-        [InlineData(6.5, 1.3,1, 1.2)]
-        [InlineData(2.9, 4.562, 3, 3.338)]
+        [InlineData(2.5, 1.3,1, 1.2)]
+        [InlineData(7.9, 4.562, 3, 3.338)]
         public void TestDifferencePrecision(double x, double y, int precision, double resPrecisDifferenceAttendu)
         {
             var calculator = new PrecisionDifference(precision);
