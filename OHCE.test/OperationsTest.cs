@@ -65,6 +65,61 @@ namespace OHCE.test
         }
 
         
+        //etape2:lesdécimaux
+        [Theory]
+        [InlineData(2.3, 8.7,1, 7.0)]
+        [InlineData(2.56, 8.78,2, 7.34)]
+       public void TestAdditionPrecision(double x, double y,int precision, double resPrecisAttendu)
+        {
+
+            Operation operation = new Operation();
+            double res = operation.PrecisionSomme(x, y, precision);
+
+            Assert.Equal(resPrecisAttendu, res, precision);
+
+        }
+
+        [Theory]
+        [InlineData(4.3, 10.7, 2, 37.41)]
+        [InlineData(7.11, 8.555, 3, 39.496)]
+        public void TestProduitPrecision(double x, double y, int precision, double resPrecisProduitAttendu)
+        {
+
+            Operation operation = new Operation();
+            double res = operation.PrecisionProduit(x, y, precision);
+
+            Assert.Equal(resPrecisProduitAttendu, res);
+
+        }
+
+        [Theory]
+        [InlineData(82.5, 5.6, 3, 2.232)]
+        [InlineData(67.56, 89.999, 6, 0.195113)]
+
+        public void TestDivisionPrecision(double x, double y, int precision, double resPrecisDivisionAttendu)
+        {
+
+            var operation = new PrecisionDivision(precision);
+            double res = operation.Diviser(x, y);
+
+            Assert.Equal(resPrecisDivisionAttendu, res);
+
+        }
+
+        [Theory]
+        [InlineData(6.5, 1.3,1, 1.2)]
+        [InlineData(2.9, 4.562, 3, 3.338)]
+        public void TestDifferencePrecision(double x, double y, int precision, double resPrecisDifferenceAttendu)
+        {
+            var calculator = new PrecisionDifference(precision);
+
+            
+            var res = calculator.Difference(x, y);
+
+            
+            Assert.Equal(resPrecisDifferenceAttendu, res);
+        }
+
 
     }
 
