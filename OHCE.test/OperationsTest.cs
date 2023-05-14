@@ -124,8 +124,8 @@ namespace OHCE.test
         //etape3:tolérance
 
         [Theory]
-        [InlineData("5\n + \n10", 13)]
-        [InlineData("3 + \n4", 11)]
+        [InlineData("5\n + \n8", 13)]
+        [InlineData("7 + \n4", 11)]
 
         public void TestSommeTolerance(string saisi, int resSommeToleranceAttendu)
         {
